@@ -24,11 +24,13 @@ class UI {
 
     this.location.textContent = weather.name;
     this.string.textContent = weather.main.temp;
-    this.humidity.textContent = `Humidity: ${weather.main.humidity}`;
-    this.visibility.textContent = `Visibility: ${weather.visibility}`;
-    this.pressure.textContent = `Pressure: ${weather.main.pressure}`;
-    this.wind.textContent = `Degrees: ${weather.wind.deg} Speed: ${
-      weather.wind.speed
-    }`;
+    this.humidity.textContent = `Humidity: ${weather.main.humidity}%`;
+    this.visibility.textContent = `Visibility: 
+    ${weather.visibility / 1000} km`;
+    this.pressure.textContent = `Pressure: ${weather.main.pressure} hPa`;
+    this.wind.textContent = `Wind: ${Math.round(
+      weather.wind.deg,
+      2
+    )}\u00B0 Speed: ${weather.wind.speed}m/s`;
   }
 }
