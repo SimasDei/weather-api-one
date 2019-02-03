@@ -16,14 +16,22 @@
       <div class="row">
         <div class="col-md-6 mx-auto text-center bg-primary mt-5 p5 rounded">
           <h1 id="w-location">Weather Api</h1>
-          <h3 class="text-info" id="w-description ">Sunny</h3>
-          <h3 id="w-string">34 &deg; C</h3>
-          <img id="w-icon" />
+          <h3 class="text-info" id="w-description">Sunny</h3>
+          <div>
+            <h3 id="w-string">34</h3>
+            <h3 style="display: inline-block;">&deg; C</h3>
+          </div>
+          <img id="w-icon" alt="weather icon" class="img-responsive" />
           <ul class="list-group my-3" id="w-details">
-            <li class="list-group-item" id="w-humidity">Lorem, ipsum.</li>
-            <li class="list-group-item" id="w-dewpoint">Lorem, ipsum dolor.</li>
-            <li class="list-group-item" id="w-feels-like">Lorem, ipsum.</li>
-            <li class="list-group-item" id="w-wind">Lorem ipsum dolor sit.</li>
+            <li class="list-group-item" id="w-expanded-desc"></li>
+
+            <li class="list-group-item" id="w-humidity"></li>
+
+            <li class="list-group-item" id="w-visibility"></li>
+
+            <li class="list-group-item" id="w-pressure"></li>
+
+            <li class="list-group-item" id="w-wind"></li>
           </ul>
           <hr />
           <button
@@ -66,7 +74,7 @@
               <div class="form-group">
                 <label for="city">City</label>
                 <input type="text" id="city" class="form-control mb-3" />
-                <label for="region">Region/State</label>
+                <label for="region">Country</label>
                 <input type="text" id="region" class="form-control" />
               </div>
             </form>

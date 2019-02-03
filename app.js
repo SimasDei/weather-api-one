@@ -1,13 +1,13 @@
 // Init Weather Class
-const weather = new Weather('Vilnius', 'Lt');
-
+const weather = new Weather('Vilnius', 'LT');
+const ui = new UI();
 // Get weather on DOM load
 
 const getWeather = () => {
   weather
     .getWeather()
     .then(result => {
-      console.log(result);
+      ui.paint(result);
     })
     .catch(error => {
       console.log(error);
